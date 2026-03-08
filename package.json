@@ -42,6 +42,7 @@
   "build": {
     "appId": "com.claude-code.interface",
     "productName": "Claude Code Interface",
+    "publish": null,
     "directories": {
       "output": "release"
     },
