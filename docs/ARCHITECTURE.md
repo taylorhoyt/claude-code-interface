@@ -16,7 +16,7 @@ Claude Code Interface is a thin GUI around the **Claude Code CLI**. It does not 
 
 5. **Input is a prompt** — Full-width, monospace input at the bottom. ⌘Enter sends. The mental model is “you’re at a prompt,” not a chat textbox.
 
-6. **Context as information** — (Planned) A visual indicator of remaining context, since that’s real information the user needs.
+6. **Context as information** — (Planned) A visual indicator of remaining context; see [PLANNED_FEATURES.md](PLANNED_FEATURES.md).
 
 ---
 
@@ -150,10 +150,12 @@ Visual tokens: deep dark background (`#0d0d14`), warm white text, indigo thinkin
 
 ## Known limitations and planned work
 
-- **Approve/reject** — With `--permission-mode default` and non-TTY stdin, the CLI may block on tool execution. The app currently supports switching to **bypass** mode. Full approve/reject per tool call (send user decisions back into the CLI) is planned and will require a different integration approach (e.g. feeding approval into the process or using a CLI mode that supports it).
+See **[PLANNED_FEATURES.md](PLANNED_FEATURES.md)** for the full list. Summary:
+
+- **Approve/reject** — Per–tool-call approve/reject in the UI is planned; currently use **bypass** mode when stdin isn’t a TTY.
 - **Single process** — Only one `claude` run at a time; new send aborts the previous.
-- **Context meter** — Not yet implemented; intended to show remaining context from usage/limits if the CLI exposes it in the stream.
-- **Raw logs** — Always written to `~/.claude/claude-code-interface/logs/` for debugging; consider optional or rotatable logs for production.
+- **Context meter** — Not yet implemented.
+- **Raw logs** — Always written to `~/.claude/claude-code-interface/logs/`; optional/rotatable logging is planned.
 
 ---
 

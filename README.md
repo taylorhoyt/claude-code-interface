@@ -76,3 +76,4 @@ The header has a **permission mode** selector (default, plan, accept edits, bypa
 ## Docs
 
 - [Architecture](docs/architecture.md) — process model, CLI integration, state, and UI structure.
+- [Planned features](docs/PLANNED_FEATURES.md) — approve/reject, context meter, logging, and backlog.
