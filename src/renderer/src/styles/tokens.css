@@ -1,0 +1,41 @@
+:root {
+  --bg-base:         #0d0d14;
+  --bg-surface:      #141420;
+  --bg-elevated:     #1c1c2e;
+  --bg-input:        #111119;
+  --border:          #2a2a3d;
+  --border-subtle:   #1e1e2e;
+
+  --text-primary:    #e4e2dd;
+  --text-muted:      #7a7888;
+  --text-faint:      #4a4858;
+  --text-code:       #c9c7e0;
+
+  --accent:          #6b8cda;
+  --accent-hover:    #7b9ce4;
+
+  --tool-read:       #5b9bd5;
+  --tool-write:      #5f9e7e;
+  --tool-bash:       #c8972a;
+  --tool-other:      #9b7cda;
+
+  --thinking-bg:     #12122a;
+  --thinking-border: #4f46e5;
+
+  --user-bg:         #141420;
+  --user-border:     #2a2a3d;
+
+  --sidebar-width:   220px;
+  --header-height:   44px;
+  --input-height:    120px;
+
+  --radius-sm:       4px;
+  --radius-md:       6px;
+  --radius-lg:       10px;
+
+  --font-mono:       'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-sans:       system-ui, -apple-system, sans-serif;
+
+  --transition-fast: 120ms ease;
+  --transition-med:  200ms ease;
+}
