@@ -8,7 +8,7 @@
 PROMPT="${1:-say hello in one word}"
 
 echo "────────────────────────────────────────"
-echo "luminous test-stream-format.sh"
+echo "claude-code-interface test-stream-format.sh"
 echo "────────────────────────────────────────"
 echo "CLAUDECODE before unset: ${CLAUDECODE:-<not set>}"
 

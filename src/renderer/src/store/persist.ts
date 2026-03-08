@@ -1,6 +1,6 @@
 import { Session } from './index'
 
-const STORAGE_KEY = 'luminous-sessions'
+const STORAGE_KEY = 'claude-code-interface-sessions'
 
 export function saveSessions(sessions: Session[]): void {
   try {

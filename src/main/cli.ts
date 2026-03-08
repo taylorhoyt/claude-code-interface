@@ -5,7 +5,7 @@ import * as path from 'path'
 import * as os from 'os'
 import * as fs from 'fs'
 
-const LOG_DIR = path.join(os.homedir(), '.claude', 'luminous', 'logs')
+const LOG_DIR = path.join(os.homedir(), '.claude', 'claude-code-interface', 'logs')
 
 let activeProcess: ChildProcess | null = null
 
@@ -182,8 +182,8 @@ export function registerCliHandlers(win: BrowserWindow): void {
     logStream.write(`[ENV_BEFORE] CLAUDE_CODE_SESSION_ID=${env['CLAUDE_CODE_SESSION_ID'] ?? '<not set>'}\n`)
     logStream.write(`[CWD] ${cwd || os.homedir()}\n`)
     logStream.write(`[ARGS] ${JSON.stringify(args)}\n`)
-    console.log('[luminous] CLAUDECODE in env:', env['CLAUDECODE'] ?? '<not set>')
-    console.log('[luminous] spawning:', args.join(' '))
+    console.log('[claude-code-interface] CLAUDECODE in env:', env['CLAUDECODE'] ?? '<not set>')
+    console.log('[claude-code-interface] spawning:', args.join(' '))
 
     delete env['CLAUDECODE']
     delete env['CLAUDE_CODE_SESSION_ID']
@@ -199,7 +199,7 @@ export function registerCliHandlers(win: BrowserWindow): void {
     activeProcess = proc
 
     proc.on('error', (err) => {
-      console.error('[luminous] spawn error:', err.message)
+      console.error('[claude-code-interface] spawn error:', err.message)
       logStream.write(`[SPAWN ERROR] ${err.message}\n`)
       logStream.end()
       activeProcess = null
@@ -218,11 +218,11 @@ export function registerCliHandlers(win: BrowserWindow): void {
     proc.stderr!.on('data', (data: Buffer) => {
       const text = data.toString()
       logStream.write(`[STDERR] ${text}`)
-      console.log('[luminous] stderr:', text.trim().slice(0, 200))
+      console.log('[claude-code-interface] stderr:', text.trim().slice(0, 200))
     })
 
     proc.on('close', (code) => {
-      console.log('[luminous] process closed, code:', code)
+      console.log('[claude-code-interface] process closed, code:', code)
       logStream.write(`[CLOSE] code=${code}\n`)
       logStream.end()
       activeProcess = null

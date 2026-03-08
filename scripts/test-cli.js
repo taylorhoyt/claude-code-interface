@@ -20,7 +20,7 @@ const prompt = process.argv[2] || 'say hello in one word'
 const model = process.argv[3] || 'claude-sonnet-4-6'
 
 console.log('─'.repeat(60))
-console.log('luminous test-cli.js')
+console.log('claude-code-interface test-cli.js')
 console.log('─'.repeat(60))
 console.log(`prompt: "${prompt}"`)
 console.log(`model:  ${model}`)

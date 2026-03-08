@@ -1,7 +1,7 @@
 {
-  "name": "luminous",
+  "name": "claude-code-interface",
   "version": "0.1.0",
-  "description": "A desktop interface for Claude Code",
+  "description": "Desktop GUI for the Claude Code CLI",
   "main": "./out/main/index.js",
   "author": "",
   "private": true,
