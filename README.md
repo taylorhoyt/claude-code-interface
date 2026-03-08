@@ -1,6 +1,6 @@
 # Claude Code Interface
 
-A desktop GUI for **Claude Code** — it wraps the `claude` CLI and renders streaming output as a focused workspace instead of a chat.
+A desktop GUI for **Claude Code** — it wraps the `claude` CLI and renders streaming output as a focused workspace instead of a chat. Licensed under [MIT](LICENSE).
 
 **Design:** No chat bubbles. The current task (commission) stays at the top. Thinking is visible in a collapsible block. Tool calls appear inline in the timeline. The input is a full-width prompt. Sessions map to Claude Code’s session IDs so `--resume` works for follow-ups.
 

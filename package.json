@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Desktop GUI for the Claude Code CLI",
   "main": "./out/main/index.js",
-  "author": "",
+  "author": "Taylor Hoyt",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "electron-vite dev",
